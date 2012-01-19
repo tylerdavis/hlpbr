@@ -13,6 +13,6 @@
 `django-admin.py startproject hlpbr`
 7. Create .gitignore and include the following:
 ```
-venv
-*.pyc
+    venv
+    *.pyc
 ```
