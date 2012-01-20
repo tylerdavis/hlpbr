@@ -154,3 +154,6 @@ import djcelery
 djcelery.setup_loader()
 BROKER_BACKEND = "djkombu.transport.DatabaseTransport"
 CELERY_RESULT_DBURI = DATABASES['default']
+
+# Local development settings import
+from settings_local import *
