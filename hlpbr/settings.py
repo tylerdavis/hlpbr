@@ -1,10 +1,14 @@
 # Django settings for hlpbr project.
 
+import os
+
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    # ('Tyler Davis', 'tyler@toughit.net'),
 )
 
 MANAGERS = ADMINS
@@ -115,10 +119,11 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
+    'gunicorn',
+    'djcelery',
+    'djkombu',
+    'django.contrib.admin',
+    'django.contrib.admindocs',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -143,3 +148,9 @@ LOGGING = {
         },
     }
 }
+
+# Celery
+import djcelery
+djcelery.setup_loader()
+BROKER_BACKEND = "djkombu.transport.DatabaseTransport"
+CELERY_RESULT_DBURI = DATABASES['default']

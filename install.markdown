@@ -25,10 +25,19 @@
 'djcelery',
 'djkombu',
 ```
+8. Prepend the following SITE_ROOT configuration to your project's
+   settings.py
+
+'''python
+import os
+
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+'''
+
 8. Append the following Celery configuration to your project's
    settings.py
 
-```
+```python
 import djcelery
 djcelery.setup_loader()
 BROKER_BACKEND = "djkombu.transport.DatabaseTransport"
@@ -41,8 +50,8 @@ CELERY_RESULT_DBURI = DATABASES['default']
 9. Create .gitignore and include the following:
 
 ```
-venv
 *.pyc
+*.swp
 ```
 
 10. Run locally
