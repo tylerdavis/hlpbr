@@ -18,7 +18,7 @@
 ###Build the project  
 `django-admin.py startproject hlpbr`
 
-###Update `INSTALLED_APPS` in your project's settings.py
+###Update _INSTALLED_APPS_ in your project's settings.py
 
 ```
 'gunicorn',
