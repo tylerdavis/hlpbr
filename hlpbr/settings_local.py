@@ -5,6 +5,3 @@ TEMPLATE_DEBUG = DEBUG
 
 ADMINS = ()
 MANAGERS = ADMINS
-
-
-derpina = "awesome"
