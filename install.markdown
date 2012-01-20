@@ -25,6 +25,7 @@
 'djcelery',
 'djkombu',
 ```
+
 8. Prepend the following SITE_ROOT configuration to your project's
    settings.py
 

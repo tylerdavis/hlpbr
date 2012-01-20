@@ -1,0 +1,9 @@
+#!/Users/tyler/virtualenvs/hlpbr/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'django-celery==2.4.2','console_scripts','djcelerymon'
+__requires__ = 'django-celery==2.4.2'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('django-celery==2.4.2', 'console_scripts', 'djcelerymon')()
+)

@@ -1,0 +1,9 @@
+#!/Users/tyler/virtualenvs/hlpbr/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'celery==2.4.6','console_scripts','celeryd'
+__requires__ = 'celery==2.4.6'
+import sys
+from pkg_resources import load_entry_point
+
+sys.exit(
+   load_entry_point('celery==2.4.6', 'console_scripts', 'celeryd')()
+)

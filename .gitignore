@@ -1,2 +1,3 @@
 venv
 *.pyc
+hlpbr/settings_local.py
