@@ -1,4 +1,4 @@
-#HLPBR/Django/Heroku - Install Notes
+#Django/Heroku/Gunicorn/Bootstrap - Install Notes
 ##Create your project
 ###Create the project folder  
 `mkdir hlprb && cd hlpbr`  
@@ -10,13 +10,16 @@
 `source bin/activate`
 
 ###Install required packages  
-`pip install Django django-celery django-kombu psycopg2 gunicorn pil`
+`pip install Django django-celery django-kombu psycopg2 gunicorn pil ipython`
 
 ###Create the requirements.txt file  
 `pip freeze > requirements.txt`
 
 ###Build the project  
 `django-admin.py startproject hlpbr`
+
+###Create templates and static directories  
+`cd hlpbr && mkdir templates && mkdir static`
 
 ###Update _INSTALLED_APPS_ in your project's settings.py
 
@@ -35,8 +38,7 @@ import os
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 ```
 
-###Append the following Celery configuration to your project's
-   settings.py
+###Append the following Celery configuration to your project's settings.py
 
 ```python
 import djcelery
