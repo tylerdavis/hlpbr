@@ -86,7 +86,7 @@ MANAGERS = ADMINS
 ###Initialize repository and commit
 `git init`
 `git add .`
-`git commit -m "hlpbr"
+`git commit -m "hlpbr"`
 
 ###Deploy to Heroku
 `heroku create --stack cedar`
