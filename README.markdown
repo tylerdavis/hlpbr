@@ -1,4 +1,4 @@
-@TODO - Document bootstrap integration
+@TODO - Document bootstrap integration  
 @TODO - Document static file handling (local & s3 deployed)
 
 #Django/Heroku/Gunicorn/Bootstrap - Install Notes
