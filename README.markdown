@@ -1,3 +1,6 @@
+@TODO - Document bootstrap integration
+@TODO - Document static file handling (local & s3 deployed)
+
 #Django/Heroku/Gunicorn/Bootstrap - Install Notes
 ##Create your project
 ###Create the project folder  
@@ -21,6 +24,8 @@
 ###Create templates and static directories  
 `cd hlpbr && mkdir templates && mkdir static`
 
+### @TODO - Bootstrap integration goes here
+
 ###Update _INSTALLED_APPS_ in your project's settings.py
 
 ```
@@ -37,6 +42,8 @@ import os
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 ```
+
+@TODO - Static file handling docs go here
 
 ###Append the following Celery configuration to your project's settings.py
 
